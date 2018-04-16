@@ -9,6 +9,8 @@ It could:
 ### Preparation
 1. Suppose that you have downloaded the [CULane dataset](https://xingangpan.github.io/projects/CULane.html) as described in [SCNN](https://github.com/XingangPan/SCNN).  
 
+Note: If you have downloaded the dataset before 16th April 2018, please update the raw annotations for train&val set as described in the dataset website.
+
 2. Clone and make
     ```Shell
     git clone https://github.com/XingangPan/seg_label_generate.git
