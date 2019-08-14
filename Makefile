@@ -9,6 +9,8 @@ COMMON_FLAGS := -DCPU_ONLY
 CXXFLAGS := -std=c++11 -fopenmp
 LDFLAGS := -fopenmp -Wl,-rpath,./lib
 
+OPENCV = `pkg-config opencv --cflags --libs`
+LIB = $(OPENCV)
 BUILD_DIR := build
 
 # make rules -------------------------------
@@ -37,7 +39,7 @@ $(BUILD_DIR)/%.o: %.cpp | $(ALL_BUILD_DIRS)
 
 $(PROJECT_NAME): $(CXX_TARGETS)
 	@echo "CXX/LD" $@
-	@$(CXX) -o $@ $^ $(LDFLAGS)
+	@$(CXX) -o $@ $^ $(LDFLAGS) ${LIB}
 
 .PHONY: clean
 clean:
