@@ -11,11 +11,17 @@ It could:
 
 Note: If you have downloaded the dataset before 16th April 2018, please update the raw annotations for train&val set as described in the dataset website.
 
-2. Clone and make
+2. Clone and build
     ```Shell
     git clone https://github.com/XingangPan/seg_label_generate.git
     cd seg_label_generate
+    
+    # if you prefer makefile
     make
+    
+    # or, if you prefer cmake
+    mkdir build && cd build
+    cmake ..
     ```
 
 ### Run the code
